@@ -28,7 +28,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo usermod -aG docker ubuntu
 
 echo Mounting NVMe SSD...
-MOUNT_GETH_PATH=/.geth
+MOUNT_GETH_PATH=/data
 sudo mkfs.xfs -f /dev/nvme1n1
 sudo mkdir $MOUNT_GETH_PATH
 sudo mount /dev/nvme1n1 $MOUNT_GETH_PATH
